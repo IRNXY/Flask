@@ -6,8 +6,8 @@
 <div id="header"></div>
 <a class="btn_back" href="/">Выход</a>
 
-{% for i, e, r, s, a, rr, ss, aa, name, pr, sp, co in user_search %}
-    <a class={{ e }}></a>
+{% for i, e, hrefe,  r, s, a, rr, ss, aa, name, pr, sp, co in user_search %}
+    <a class={{ e }} href={{ hrefe }}></a>
     <label class={{ i }}>{{ name }}</label>
 
     <label class={{ r }}>Цена:</label>

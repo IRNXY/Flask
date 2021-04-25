@@ -124,7 +124,7 @@ def main():
             user = db_sess.query(Corp).filter(Corp.name == form.name.data).first()
             if user and user.check_password(form.password.data):
                 # login_user(user, remember=form.remember_me.data)
-                return redirect("/main")
+                return redirect("/main_menu/2")
             return render_template('join.html', title='Регистрация', form=form, message="Неверный ПАРОЛЬ или ИМЯ организации")
         return render_template('join.html', title='Регистрация', form=form)
 
@@ -219,18 +219,21 @@ def main():
         if not form.validate_on_submit() and type == "2":
             try:
                 a = request.form['text']
+                b = request.form['Sphere']
                 con = sqlite3.connect("corp.db")
                 cur = con.cursor()
                 result = cur.execute(f"""SELECT corp.name, corps_next.prize, corps_next.sphere, corps_next.count 
-                                        FROM corp, corps_next WHERE corp.name = '{a}' AND corps_next.name = '{a}'""").fetchall()
+                                        FROM corp, corps_next 
+                                        WHERE corps_next.prize >= {int(a) - 2000} AND
+                                         corps_next.prize  <= {int(a) + 2000} AND 
+                                         corps_next.sphere = '{b}'""").fetchall()
                 print(result)
                 con.close()
-                # db_sess = db_session.create_session()
-                # user = db_sess.query(Corp).filter(Corp.name == a, Corp.name).first()
                 answ = []
                 for e, i in enumerate(result):
                     if i:
-                        answ.append(("label_n_2" + str(e + 1), "btn_cont" + str(e + 1), "label_p_2" + str(e + 1),
+                        answ.append(("label_n_2" + str(e + 1), "btn_cont" + str(e + 1),
+                                     '/main_menu_more/' + i[0] + '/' + type, "label_p_2" + str(e + 1),
                                      "label_s_2" + str(e + 1), "label_a_2" + str(e + 1), "label_p_-_2" + str(e + 1),
                                      "label_s_-_2" + str(e + 1), "label_a_-_2" + str(e + 1), i[0], i[1], i[2], i[3]))
                 return render_template("main.html", user_search=answ, form=form)
@@ -240,6 +243,19 @@ def main():
                 return render_template("main.html", user_search=answ, form=form)
 
         return render_template("main.html", user_search=answ, form=form)
+
+    @app.route('/main_menu_more/<name>/<type>', methods=['GET', 'POST'])
+    def main_menu_more(name, type):
+        form = Free()
+        con = sqlite3.connect("corp.db")
+        cur = con.cursor()
+        result = cur.execute(f"""SELECT corp.name, corps_next.prize, corps_next.sphere, corps_next.count,
+                                corps_next.age, corp.fon_num, corps_next.about
+                               FROM corp, corps_next 
+                               WHERE corps_next.name >= '{name}' AND corp.name <= '{name}' """).fetchall()
+        print(result)
+        con.close()
+        return render_template("main_more.html", user_search=result[0], form=form)
 
     @app.route("/start")
     def start():
