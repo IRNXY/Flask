@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div id="header"><div class="position-absolute top-0 end-0"><a href="/">Вернутся на главную</a></div></div>
+<div class="main d-flex flex-row mt-3">
+    <div id=" d-flex flex-column">
+        <form action="" method="post" autocomplete="off">
+            <label class="label_21 mb-1 d-block">Средняя цена</label>
+            <textarea class="mb-2 d-block" rows="1" cols="15" name="text"></textarea>
+            <label class="label_22 mb-1 d-block">Сфера</label>
+            <select class="Sphere mb-3 d-block" id="Sphere" name="Sphere">
+                  <option>Ютуб</option>
+                  <option>Инстаграм</option>
+                  <option>Банера</option>
+                  <option>Телеканал</option>
+                  <option>Интернет</option>
+                </select>
+            {{ form.submit(type="submit", class="btn_search") }}
+        </form>
+    </div>
+    <div class="content">
+        <div class="ms-4">
+             <div class="border border-primary p-2 m-5 position-absolute bottom-0 end-0">
+                <h4 class="text-center">
+                    <a class="btn_ret" href="/main_menu/2">Назад</a>
+                </h4>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}
+
