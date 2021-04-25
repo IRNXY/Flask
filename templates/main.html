@@ -1,37 +1,53 @@
 {% extends "base.html" %}
 
 {% block content %}
-<form action="" method="post" autocomplete="off">
-<div id="sidebar"></div>
-<div id="header"></div>
-<a class="btn_back" href="/">Выход</a>
 
-{% for i, e, hrefe,  r, s, a, rr, ss, aa, name, pr, sp, co in user_search %}
-    <a class={{ e }} href={{ hrefe }}></a>
-    <label class={{ i }}>{{ name }}</label>
+<div id="header"><div class="position-absolute top-0 end-0"><a href="/">Вернутся на главную</a></div></div>
+<div class="main d-flex flex-row mt-3">
+    <div id=" d-flex flex-column">
+        <form action="" method="post" autocomplete="off">
+            <label class="label_21 mb-1 d-block">Средняя цена</label>
+            <textarea class="mb-2 d-block" rows="1" cols="15" name="text"></textarea>
+            <label class="label_22 mb-1 d-block">Сфера</label>
+            <select class="Sphere mb-3 d-block" id="Sphere" name="Sphere">
+                  <option>Ютуб</option>
+                  <option>Инстаграм</option>
+                  <option>Банера</option>
+                  <option>Телеканал</option>
+                  <option>Интернет</option>
+                </select>
+            {{ form.submit(type="submit", class="btn_search") }}
+        </form>
+    </div>
+    <div class="content">
+        {% for i, e, hrefe,  r, s, a, rr, ss, aa, name, pr, sp, co in user_search %}
+            <div class="border border-primary p-2 ms-4">
+                <h4 class="mb-2 text-center">
+                    <a class="{{ e }}" href={{ hrefe }}>
+                        {{ name }}
+                    </a>
+                </h4>
 
-    <label class={{ r }}>Цена:</label>
-    <label class={{ rr }}>{{ pr }}</label>
 
-    <label class={{ s }}>Сфера:</label>
-    <label class={{ ss }}>{{ sp }}</label>
+                <div class="mb-2">
+                    <label class={{ r }}>Цена:</label>
+                    <label class={{ rr }}>{{ pr }}</label>
+                </div>
 
-    <label class={{ a }}>Аудитория:</label>
-    <label class={{ aa }}>{{ co }}</label>
+                <div class="mb-2">
+                    <label class={{ s }}>Сфера:</label>
+                    <label class={{ ss }}>{{ sp }}</label>
+                </div>
 
-{% endfor %}
+                <div class="mb-2">
+                    <label class={{ a }}>Аудитория:</label>
+                    <label class={{ aa }}>{{ co }}</label>
+                </div>
 
-    <label class="label_21">Средняя цена</label>
-    <textarea rows="1" cols="15" name="text"></textarea>
-    <label class="label_22">Сфера</label>
-    <select class="Sphere" id="Sphere" name="Sphere">
-          <option>Ютуб</option>
-          <option>Инстаграм</option>
-          <option>Банера</option>
-          <option>Телеканал</option>
-          <option>Интернет</option>
-        </select>
-    {{ form.submit(type="submit", class="btn_search") }}
+            </div>
+            {% endfor %}
+    </div>
+</div>
 
-</form>
+
 {% endblock %}

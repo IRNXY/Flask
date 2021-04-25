@@ -1,35 +1,25 @@
 {% extends "base.html" %}
 
 {% block content %}
-<label class="label_3">Выберите роль</label>
+<div class="position-absolute top-0 end-0"><a href="/">Вернутся на главную</a></div>
+<!--<h4 class="label_3 text-center py-5">Выберите роль</h4>-->
+<h4 class="label_3 text-center py-5">Товародатель</h4>
+
+<!--    <div class="d-flex justify-content-center">
+        <div class="btn_reklamodatel btn btn-primary mx-5"><a class="text-white" href="/login_rek">Рекламодатель</a></div>
+        <div class="btn_tovarodatel btn btn-primary mx-5"><a class="text-white" href="/login_tov">Товародатель</a></div>
+    </div>-->
 <form action="" method="post" autocomplete="off">
-    <a class="btn_reklamodatel" href="/login_rek">Рекламодатель</a>
-    <a class="btn_tovarodatel">Товародатель</a>
     {{ form.hidden_tag() }}
-    <label class="label_otst">ffffff</label><br>
-    <label class="label_otst">ffffff</label><br>
-    <label class="label_otst">ffffff</label><br>
-    <label class="label_otst">ffffff</label><br>
-    <label class="label_otst">ffffff</label>
 
-    <p>
         <label class="label_17">Имя товара</label>
-        {{ form.name(class="form-control") }}<br>
-    </p>
+        {{ form.name(class="form-control mb-3") }}
 
-    <label class="label_otst">ffffff</label><br>
-    <label class="label_otst">ffffff</label>
-
-    <p>
         <label class="label_18">Цена</label>
-        {{ form.prize(class="form-control") }}<br>
-    </p>
-
-    <label class="label_otst">ffffff</label><br>
-    <label class="label_otst">ffffff</label>
+        {{ form.prize(class="form-control mb-3") }}
 
         <label class="label_19">Сфера использования</label>
-    <select class="form-control" id="Sphere" name="Sphere">
+    <select class="form-control mb-3" id="Sphere" name="Sphere">
           <option>Быт</option>
           <option>Спорт</option>
           <option>Запчасти для автомобиля</option>
@@ -37,16 +27,10 @@
           <option>Компьюторные игры</option>
         </select>
 
-    <label class="label_otst">ffffff</label><br>
-    <label class="label_otst">ffffff</label><br>
-    <label class="label_otst">ffffff</label><br>
-        <label class="label_otst">ffffff</label><br>
-    <p>
-        <label class="label_20">О Рекламируемом объекте</label>
-        {{ form.about(class="form-control") }}<br>
-    </p>
+        <label class="label_20 mb-3">О Рекламируемом объекте</label>
+        <textarea class="text_3 mb-3 d-block" rows="3" cols="50" name="text"></textarea>
 
-    <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+    {{ form.submit(type="submit", class="btn btn-primary") }}
 
     {{message}}
 

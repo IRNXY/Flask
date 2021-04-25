@@ -1,61 +1,48 @@
 {% extends "base.html" %}
 
 {% block content %}
-<label class="label_3">Выберите роль</label>
+<div class="position-absolute top-0 end-0"><a href="/">Вернутся на главную</a></div>
+<!--<h4 class="label_3 text-center py-5">Выберите роль</h4>-->
+<h4 class="label_3 text-center py-5">Рекламодатель</h4>
+
 <form action="" method="post" autocomplete="off">
-    <a class="btn_reklamodatel">Рекламодатель</a>
-    <a class="btn_tovarodatel" href="/login_tov">Товародатель</a>
+<!--    <div class="d-flex justify-content-center">
+        <div class="btn_reklamodatel btn btn-primary mx-5"><a class="text-white" href="/login_rek">Рекламодатель</a></div>
+        <div class="btn_tovarodatel btn btn-primary mx-5"><a class="text-white" href="/login_tov">Товародатель</a></div>
+    </div>-->
     {{ form.hidden_tag() }}
-    <label class="label_otst">ffffff</label><br>
-    <label class="label_otst">ffffff</label><br>
-    <label class="label_otst">ffffff</label><br>
-    <p>
+
         <label class="label_11">Цена</label>
-        {{ form.prize(class="form-control") }}<br>
-    </p>
-    <label class="label_otst">ffffff</label><br>
-    <label class="label_otst">ffffff</label>
+        {{ form.prize(class="form-control mb-3") }}
+
         <label class="label_14">Сфера распространения</label>
-    <select class="form-control" id="Sphere" name="Sphere">
+    <select class="form-control mb-3" id="Sphere" name="Sphere">
           <option>Ютуб</option>
           <option>Инстаграм</option>
           <option>Банера</option>
           <option>Телеканал</option>
           <option>Интернет</option>
-        </select>
-    <label class="label_otst">ffffff</label><br>
-    <label class="label_otst">ffffff</label><br>
-    <label class="label_otst">ffffff</label><br>
-    <label class="label_otst">ffffff</label>
+    </select>
+
         <label class="label_12">Аудитория</label>
-    <select class="form-control" id="Viewers" name="Viewers">
+    <select class="form-control mb-3" id="Viewers" name="Viewers">
           <option>1 000 - 2 000 чел.</option>
           <option>5 000 - 10 000 чел.</option>
           <option>10 000 - 50 000 чел.</option>
           <option>50 000 - 100 000 чел.</option>
           <option>100 000 - 200 000 чел.</option>
-        </select>
-    <label class="label_otst">ffffff</label><br>
-    <label class="label_otst">ffffff</label><br>
-    <label class="label_otst">ffffff</label><br>
-    <label class="label_otst">ffffff</label>
-        <label class="label_13">Возростная группа</label>
-    <select class="form-control" id="Viewers_Age" name="Viewers_Age">
+    </select>
+    <label class="label_13">Возростная группа</label>
+    <select class="form-control mb-3" id="Viewers_Age" name="Viewers_Age">
           <option>0 - 10 лет</option>
           <option>10 - 20 лет</option>
           <option>20 - 40 лет</option>
           <option>40 - 60 лет</option>
           <option>60+ лет</option>
         </select>
-    <label class="label_otst">ffffff</label><br>
-    <label class="label_otst">ffffff</label><br>
-    <label class="label_otst">ffffff</label><br>
-    <label class="label_otst">ffffff</label>
-    <p>
-        <label class="label_15">О Рекламодателе</label>
-        <textarea class="text_2" rows="3" cols="15" name="text"></textarea>
-    </p>
-    <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+        <label class="label_15 d-block">О Рекламодателе</label>
+        <textarea class="text_2 mb-3 d-block" rows="3" cols="50" name="text"></textarea>
+{{ form.submit(type="submit", class="btn btn-primary") }}
     {{message}}
 </form>
 {% endblock %}

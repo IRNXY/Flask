@@ -1,24 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
-<label class="label_3">Регистрация</label>
+<div class="position-absolute top-0 end-0"><a href="/">Вернутся на главную</a></div>
+<h4 class="label_3">Регистрация</h4>
 <form action="" method="post" autocomplete="off">
     {{ form.hidden_tag() }}
-    <label class="label_otst">ffffff</label><br>
-    <label class="label_otst">ffffff</label><br>
-    <label class="label_otst">ffffff</label><br>
-    <p>
         <label class="label_4">Почта</label>
-        {{ form.email(class="form-control", type="email") }}<br>
+        {{ form.email(class="form-control", type="email") }}
         {% for error in form.email.errors %}
             <p class="alert alert-danger" role="alert">
                 {{ error }}
             </p>
         {% endfor %}
-    </p>
-    <label class="label_otst">ffffff</label><br>
-    <label class="label_otst">ffffff</label>
-    <p>
+
+
         <label class="label_5">Пароль</label>
         {{ form.password(class="form-control", type="password") }}<br>
         {% for error in form.password.errors %}
@@ -26,21 +21,13 @@
                 {{ error }}
             </p>
         {% endfor %}
-    </p>
-    <label class="label_otst">ffffff</label><br>
-    <label class="label_otst">ffffff</label>
-    <p>
+
         <label class="label_6">Повторите пароль</label>
         {{ form.password_again(class="form-control", type="password") }}<br>
-    </p>
-    <label class="label_otst">ffffff</label><br>
-    <label class="label_otst">ffffff</label><br>
-    <p>
+
         <label class="label_7">Имя организации</label>
         {{ form.name(class="form-control") }}<br>
-    </p>
-    <label class="label_otst">ffffff</label><br>
-    <label class="label_otst">ffffff</label><br>
+
         <label class="label_16">Контактный номер телефона</label>
         {{ form.fon_num(class="form-control") }}<br>
 

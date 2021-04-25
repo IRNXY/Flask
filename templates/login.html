@@ -1,9 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-<label class="label_3">Выберите роль</label>
-{% for i, e in a%}
-    <a class="btn_reklamodatel" href={{ i }}>Рекламодатель</a>
-    <a class="btn_tovarodatel" href={{ e }}>Товародатель</a>
-{% endfor %}
+<div class="position-absolute top-0 end-0"><a href="/">Вернутся на главную</a></div>
+<h4 class="label_3 text-center py-5">Выберите роль</h4>
+<div class="d-flex justify-content-center">
+    {% for i, e in a%}
+        <div class="btn_reklamodatel btn btn-primary mx-5"><a class="text-white" href={{ i }}>Рекламодатель</a></div>
+        <div class="btn_tovarodatel btn btn-primary mx-5"><a class="text-white" href={{ e }}>Товародатель</a></div>
+    {% endfor %}
+</div>
 {% endblock %}

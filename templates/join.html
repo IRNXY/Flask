@@ -1,25 +1,18 @@
 {% extends "base.html" %}
 
 {% block content %}
+<div class="position-absolute top-0 end-0"><a href="/">Вернутся на главную</a></div>
+<h1 class="label_8">Вход</h1>
 <form action="" method="post" autocomplete="off">
-    <h1 class="label_8">Вход</h1>
     {{ form.hidden_tag() }}
-        <h3>ffffff</h3>
-    <h3>ffffff</h3>
-    <h3>ffffff</h3>
-    <h3>ffffff</h3>
-    <h3>ffffff</h3>
-    <h3>ffffff</h3>
-    <h3>ffffff</h3>
-        <h4 class="label_1" >Имя организации</h4><br>
-        {{ form.name(class="form-control") }}<br>
-    <h3>ffffff</h3>
-    <h3>ffffff</h3>
 
-        <h4 class="label_2">Пароль</h4><br>
-        {{ form.password(class="form-control", type="password") }}
+    <label class="label_1" >Имя организации</label>
+    {{ form.name(class="form-control mb-2") }}
+
+    <label class="label_2">Пароль</label>
+    {{ form.password(class="form-control mb-2", type="password") }}
 
     {{ form.submit(type="submit", class="btn btn-primary") }}
-    <label class="label_10">{{message}}</label>
+
 </form>
 {% endblock %}
