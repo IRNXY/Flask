@@ -1,7 +1,37 @@
 {% extends "base.html" %}
 
 {% block content %}
+<form action="" method="post" autocomplete="off">
 <div id="sidebar"></div>
 <div id="header"></div>
 <a class="btn_back" href="/">Выход</a>
+
+{% for i, e, r, s, a, rr, ss, aa, name, pr, sp, co in user_search %}
+    <a class={{ e }}></a>
+    <label class={{ i }}>{{ name }}</label>
+
+    <label class={{ r }}>Цена:</label>
+    <label class={{ rr }}>{{ pr }}</label>
+
+    <label class={{ s }}>Сфера:</label>
+    <label class={{ ss }}>{{ sp }}</label>
+
+    <label class={{ a }}>Аудитория:</label>
+    <label class={{ aa }}>{{ co }}</label>
+
+{% endfor %}
+
+    <label class="label_21">Средняя цена</label>
+    <textarea rows="1" cols="15" name="text"></textarea>
+    <label class="label_22">Сфера</label>
+    <select class="Sphere" id="Sphere" name="Sphere">
+          <option>Ютуб</option>
+          <option>Инстаграм</option>
+          <option>Банера</option>
+          <option>Телеканал</option>
+          <option>Интернет</option>
+        </select>
+    {{ form.submit(type="submit", class="btn_search") }}
+
+</form>
 {% endblock %}

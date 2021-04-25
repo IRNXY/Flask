@@ -6,6 +6,7 @@ class CorpAnother(SqlAlchemyBase):
     __tablename__ = 'corps_another'
     # news = orm.relation ( "News", back_populates='user' )
     id = sqlalchemy.Column(sqlalchemy.Integer, primary_key=True, autoincrement=True)
+    name_main = sqlalchemy.Column(sqlalchemy.String, nullable=True)
     name = sqlalchemy.Column(sqlalchemy.String, nullable=True)
     prize = sqlalchemy.Column(sqlalchemy.Integer, nullable=True)
     sphere = sqlalchemy.Column(sqlalchemy.String, nullable=True)

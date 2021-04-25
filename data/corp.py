@@ -13,8 +13,7 @@ class Corp(SqlAlchemyBase):
     email = sqlalchemy.Column(sqlalchemy.String,
                               index=True, unique=True, nullable=True)
     hashed_password = sqlalchemy.Column(sqlalchemy.String, nullable=True)
-    created_date = sqlalchemy.Column(sqlalchemy.DateTime,
-                                     default=datetime.datetime.now)
+    who = sqlalchemy.Column(sqlalchemy.String, nullable=True)
     fon_num = sqlalchemy.Column(sqlalchemy.Integer, nullable=True)
 
     def __repr__(self):

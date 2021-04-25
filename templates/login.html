@@ -2,6 +2,8 @@
 
 {% block content %}
 <label class="label_3">Выберите роль</label>
-    <a class="btn_reklamodatel" href="/login_rek">Рекламодатель</a>
-    <a class="btn_tovarodatel" href="/login_tov">Товародатель</a>
+{% for i, e in a%}
+    <a class="btn_reklamodatel" href={{ i }}>Рекламодатель</a>
+    <a class="btn_tovarodatel" href={{ e }}>Товародатель</a>
+{% endfor %}
 {% endblock %}

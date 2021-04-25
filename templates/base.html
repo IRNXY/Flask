@@ -10,23 +10,36 @@
   <title>Абсолютное позиционирование</title>
   <style type="text/css">
    body { margin: 0; }
-   #sidebar, #content, #fon, #header, .btn_priv, .btn_about, .btn_work, .btn_creater, .btn_join, .btn_in, H1, H4, .label_1,
+   textarea, #sidebar, #content, #fon, #header, #forms, .btn_priv, .btn_about, .btn_work, .btn_creater, .btn_join, .btn_in, H1, H4, .label_1,
     .label_2, .form-control, .btn, .label_4, .label_3, .label_4, .label_5, .label_6, .label_7, .label_8, .label_9,
     .label_10, .btn_paskhalka, .btn_back, .btn_reklamodatel, .btn_tovarodatel, .label_11, .label_12,
-    .label_13, .label_14, .label_15, .label_16, .label_17, .label_18, .label_19, .label_20{ position: absolute; }
-   #sidebar, #content, #fon, #header, .btn_priv, .btn_about, .btn_work, .btn_creater, .btn_join, .btn_in, H1, H4, .label_1,
+    .label_13, .label_14, .label_15, .label_16, .label_17, .label_18, .label_19, .label_20, .label_21, .label_22, .label_n_21, .label_n_22,
+     .label_n_23, .label_n_24, .label_p_21, .label_p_22, .label_p_23, .label_p_24, .label_s_21, .label_s_22, .label_s_23,
+      .label_s_24, .label_a_21, .label_a_22, .label_a_23, .label_a_24, .label_p_-_21, .label_p_-_22, .label_p_-_23, .label_p_-_24,
+         .label_s_-_21, .label_s_-_22, .label_s_-_23, .label_s_-_24, .label_a_-_21,.label_a_-_22, .label_a_-_23,
+         .label_a_-_24, .btn_cont1, .btn_cont2, .btn_cont3, .btn_cont4,
+       .Sphere, .btn_search, .text_2{ position: absolute; }
+   textarea, #sidebar, #content, #fon, #header, #forms, .btn_priv, .btn_about, .btn_work, .btn_creater, .btn_join, .btn_in, H1, H4, .label_1,
     .label_2, .form-control, .btn, .label_4, .label_3, .label_4, .label_5, .label_6, .label_7, .label_8, .label_9,
      .label_10, .btn_paskhalka, .btn_back, .btn_reklamodatel, .btn_tovarodatel, .label_11, .label_12,
-     .label_13, .label_14, .label_15, .label_16, .label_17, .label_18, .label_19, .label_20{ overflow: auto; padding: 10px; }
+     .label_13, .label_14, .label_15, .label_16, .label_17, .label_18, .label_19, .label_20, .label_21, .label_22, .label_n_21, .label_n_22,
+      .label_n_23, .label_n_24, .label_p_21, .label_p_22, .label_p_23, .label_p_24, .label_s_21, .label_s_22, .label_s_23, .label_s_24,
+         .label_a_21,.label_a_22, .label_a_23, .label_a_24, .label_p_-_21, .label_p_-_22, .label_p_-_23, .label_p_-_24,
+         .label_s_-_21, .label_s_-_22, .label_s_-_23, .label_s_-_24, .label_a_-_21,.label_a_-_22, .label_a_-_23,
+         .label_a_-_24, .btn_cont1, .btn_cont2, .btn_cont3, .btn_cont4, .Sphere, .btn_search, .text_2{ overflow: auto; padding: 10px; }
+
+   textarea{left: 1%; top: 20%; height: 7%; width: 14%;}
+
+   #forms { background: transparent; top: 10%; left: 10%; width: 30%; height: 10%;}
 
    #fon { background: #B7FAC3; /* задний цвет */ top: 0px; /* расстояние от верхнего края */ left: 0px; /* расстояние от левого края */
         right: 0px; /* расстояние от правого края */ bottom: 0px; /* расстояние от нижнего края */ }
 
-   #header { height: 85px; /* Высота слоя */ background: #FEDFC0; border-bottom: 2px solid #7B5427; right: 0px; left: 0px; top: 0px; }
+   #header { height: 11%; /* Высота слоя */ background: #FEDFC0; border-bottom: 2px solid #7B5427; right: 0px; left: 0px; top: 0px; }
 
    #header h1 { padding: 20px; margin: 0; }
 
-   #sidebar {width: 250px; background: #ECF5E4; left: 0px; border-right: 1px solid #231F20; top: 82px; /* Расстояние от верхнего края */
+   #sidebar {width: 16.2%; background: #ECF5E4; left: 0px; border-right: 1px solid #231F20; top: 82px; /* Расстояние от верхнего края */
      bottom: 0; /* Расстояние снизу  */}
 
    .btn_priv { border: 4px solid #4CAF50; top: 9px; left: 300px; background: #fc3; padding: 0px; /* Поля вокруг текста */}
@@ -92,9 +105,60 @@
    .label_18{left: 43%; top: 31%; font-size: 20pt; font-weight: 600; color: #000000;}
    .label_19{left: 43%; top: 45%; font-size: 20pt; font-weight: 600; color: #000000;}
    .label_20{left: 43%; top: 59%; font-size: 20pt; font-weight: 600; color: #000000;}
+
+   .btn_cont1 {left: 16.2%; top: 11%; height: 27%; width: 12%; border: 4px solid gray; background-color: #FFFA0A;}
+   .btn_cont2 {left: 28.2%; top: 11%; height: 27%; width: 12%; border: 4px solid gray; background-color: #DBEA71;}
+   .btn_cont3 {left: 40.2%; top: 11%; height: 27%; width: 12%; border: 4px solid gray; background-color: #E6D075;}
+   .btn_cont4 {left: 52.2%; top: 11%; height: 27%; width: 12%; border: 4px solid gray; background-color: #E6D075;}
+   .btn_cont5 {left: 63.2%; top: 19%; height: 27%; width: 5%; border: 4px solid gray; background-color: transparent;}
+   .btn_cont6 {left: 68.2%; top: 19%; height: 8%; width: 5%; border: 4px solid gray; background-color: transparent;}
+   .btn_cont7 {left: 73.2%; top: 19%; height: 8%; width: 5%; border: 4px solid gray; background-color: transparent;}
+
+   .label_21{left: 1%; top: 14%; font-size: 15pt; font-weight: 600; color: #000000;}
+   .label_22{left: 1%; top: 26%; font-size: 15pt; font-weight: 600; color: #000000;}
+   .Sphere{left: 1%; top: 32%; width: 14%; height: 6%;}
+   .btn_search{left: 1%; top: 42%; width: 10%; height: 12%;}
+
+   .label_n_21{left: 20%; top: 12%; font-size: 13pt; font-weight: 600; color: #000000;}
+   .label_n_22{left: 32%; top: 12%; font-size: 13pt; font-weight: 600; color: #000000;}
+   .label_n_23{left: 44%; top: 12%; font-size: 13pt; font-weight: 600; color: #000000;}
+   .label_n_24{left: 56%; top: 12%; font-size: 13pt; font-weight: 600; color: #000000;}
+
+   .label_p_21{left: 16%; top: 16%; font-size: 13pt; font-weight: 600; color: #000000;}
+   .label_p_22{left: 28%; top: 16%; font-size: 13pt; font-weight: 600; color: #000000;}
+   .label_p_23{left: 40%; top: 16%; font-size: 13pt; font-weight: 600; color: #000000;}
+   .label_p_24{left: 52%; top: 16%; font-size: 13pt; font-weight: 600; color: #000000;}
+
+   .label_s_21{left: 16%; top: 20%; font-size: 13pt; font-weight: 600; color: #000000;}
+   .label_s_22{left: 28%; top: 20%; font-size: 13pt; font-weight: 600; color: #000000;}
+   .label_s_23{left: 40%; top: 20%; font-size: 13pt; font-weight: 600; color: #000000;}
+   .label_s_24{left: 52%; top: 20%; font-size: 13pt; font-weight: 600; color: #000000;}
+
+   .label_a_21{left: 16%; top: 24%; font-size: 13pt; font-weight: 600; color: #000000;}
+   .label_a_22{left: 28%; top: 24%; font-size: 13pt; font-weight: 600; color: #000000;}
+   .label_a_23{left: 40%; top: 24%; font-size: 13pt; font-weight: 600; color: #000000;}
+   .label_a_24{left: 52%; top: 24%; font-size: 13pt; font-weight: 600; color: #000000;}
+
+   .label_p_-_21{left: 19.5%; top: 16%; font-size: 13pt; font-weight: 600; color: #000000;}
+   .label_p_-_22{left: 30.5%; top: 16%; font-size: 13pt; font-weight: 600; color: #000000;}
+   .label_p_-_23{left: 43.5%; top: 16%; font-size: 13pt; font-weight: 600; color: #000000;}
+   .label_p_-_24{left: 55.5%; top: 16%; font-size: 13pt; font-weight: 600; color: #000000;}
+
+   .label_s_-_21{left: 20%; top: 20%; font-size: 13pt; font-weight: 600; color: #000000;}
+   .label_s_-_22{left: 28%; top: 20%; font-size: 13pt; font-weight: 600; color: #000000;}
+   .label_s_-_23{left: 40%; top: 20%; font-size: 13pt; font-weight: 600; color: #000000;}
+   .label_s_-_24{left: 52%; top: 20%; font-size: 13pt; font-weight: 600; color: #000000;}
+
+   .label_a_-_21{left: 17%; top: 27.5%; font-size: 13pt; font-weight: 600; color: #000000;}
+   .label_a_-_22{left: 29%; top: 24%; font-size: 13pt; font-weight: 600; color: #000000;}
+   .label_a_-_23{left: 41%; top: 24%; font-size: 13pt; font-weight: 600; color: #000000;}
+   .label_a_-_24{left: 53%; top: 24%; font-size: 13pt; font-weight: 600; color: #000000;}
+
    .label_otst{font-size: 14pt; color: #0BDA51;}
 
    .btn{left: 33%; top: 80%; width: 200px; height: 50px; margin-left: 10%;}
+
+   .text_2 {top: 70%; left: 42%; width: 32.5%;}
 
   </style>
  </head>

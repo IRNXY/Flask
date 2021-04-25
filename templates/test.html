@@ -1,55 +1,9 @@
-<!doctype html>
-<html lang="en">
- <head>
-  <meta charset="utf-8">
-  <title>Тег INPUT, атрибут checked</title>
- </head>
- <body>
+{% extends "base.html" %}
 
-  <form method="post" action="input5.php">
-   <p><b>С какими операционными системами вы знакомы?</b></p>
-   <p><input type="checkbox" name="option1" value="a1" checked>Windows 95/98<Br>
-   <input type="checkbox" name="option2" value="a2">Windows 2000<Br>
-   <input type="checkbox" name="option3" value="a3">System X<Br>
-   <input type="checkbox" name="option4" value="a4">Linux<Br>
-   <input type="checkbox" name="option5" value="a5">X3-DOS</p>
-   <p><input type="submit" value="Отправить"></p>
-  </form>
-
- </body>
-</html>
-
-<!--<!doctype html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-    <!--<meta charset="utf-8">-->
-    <!--<link rel="stylesheet"-->
-          <!--href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"-->
-          <!--integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"-->
-          <!--crossorigin="anonymous">-->
-    <!--<title>{{title}}</title>-->
-<!--</head>-->
-<!--<body>-->
-<!--<div class="bg-danger text-white">-->
-    <!--<header>-->
-        <!--<nav class="navbar navbar-light bg-light">-->
-            <!--<a class="navbar-brand" href="#">Наше приложение</a>-->
-        <!--</nav>-->
-    <!--</header>-->
-    <!--&lt;!&ndash; Begin page content &ndash;&gt;-->
-    <!--<main role="main" class="container">-->
-        <!--{% block content %}{% endblock %}-->
-    <!--</main>-->
-    <!--<h1></h1>-->
-<!--<p class="text-danger">.text-warning</p>-->
-<!--<p class="text-danger">.text-warning</p>-->
-<!--<p class="text-danger">.text-warning</p>-->
-<!--<p class="text-danger">.text-warning</p>-->
-<!--<p class="text-danger">.text-warning</p>-->
-<!--<p class="text-danger">.text-warning</p>-->
-<!--<p class="text-danger">.text-warning</p>-->
-<!--<h5 class="text-danger">.text-warning</h5>-->
-<!--<h5 class="text-danger">.text-warning</h5>-->
-<!--</div>-->
-<!--</body>-->
-<!--</html>-->
+{% block content %}
+<form action="" method="post" autocomplete="off">
+    <p><b>Введите ваш отзыв:</b></p>
+    <p><textarea rows="10" cols="45" id="text"></textarea></p>
+    <p><input type="submit" value="Отправить"></p>
+</form>
+{% endblock %}
