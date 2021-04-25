@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+<label class="label_3">Выберите роль</label>
+<form action="" method="post" autocomplete="off">
+    <a class="btn_reklamodatel" href="/login_rek">Рекламодатель</a>
+    <a class="btn_tovarodatel">Товародатель</a>
+    {{ form.hidden_tag() }}
+    <label class="label_otst">ffffff</label><br>
+    <label class="label_otst">ffffff</label><br>
+    <label class="label_otst">ffffff</label><br>
+    <label class="label_otst">ffffff</label><br>
+    <label class="label_otst">ffffff</label>
+
+    <p>
+        <label class="label_17">Имя товара</label>
+        {{ form.name(class="form-control") }}<br>
+    </p>
+
+    <label class="label_otst">ffffff</label><br>
+    <label class="label_otst">ffffff</label>
+
+    <p>
+        <label class="label_18">Цена</label>
+        {{ form.prize(class="form-control") }}<br>
+    </p>
+
+    <label class="label_otst">ffffff</label><br>
+    <label class="label_otst">ffffff</label>
+
+        <label class="label_19">Сфера использования</label>
+    <select class="form-control" id="Sphere" name="Sphere">
+          <option>Быт</option>
+          <option>Спорт</option>
+          <option>Запчасти для автомобиля</option>
+          <option>Косметика</option>
+          <option>Компьюторные игры</option>
+        </select>
+
+    <label class="label_otst">ffffff</label><br>
+    <label class="label_otst">ffffff</label><br>
+    <label class="label_otst">ffffff</label><br>
+        <label class="label_otst">ffffff</label><br>
+    <p>
+        <label class="label_20">О Рекламируемом объекте</label>
+        {{ form.about(class="form-control") }}<br>
+    </p>
+
+    <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+
+    {{message}}
+
+</form>
+{% endblock %}

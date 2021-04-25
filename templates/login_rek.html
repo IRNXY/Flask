@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+<label class="label_3">Выберите роль</label>
+<form action="" method="post" autocomplete="off">
+    <a class="btn_reklamodatel">Рекламодатель</a>
+    <a class="btn_tovarodatel" href="/login_tov">Товародатель</a>
+    {{ form.hidden_tag() }}
+    <label class="label_otst">ffffff</label><br>
+    <label class="label_otst">ffffff</label><br>
+    <label class="label_otst">ffffff</label><br>
+    <p>
+        <label class="label_11">Цена</label>
+        {{ form.prize(class="form-control") }}<br>
+    </p>
+    <label class="label_otst">ffffff</label><br>
+    <label class="label_otst">ffffff</label>
+        <label class="label_14">Сфера распространения</label>
+    <select class="form-control" id="Sphere" name="Sphere">
+          <option>Ютуб</option>
+          <option>Инстаграм</option>
+          <option>Банера</option>
+          <option>Телеканал</option>
+          <option>Интернет</option>
+        </select>
+    <label class="label_otst">ffffff</label><br>
+    <label class="label_otst">ffffff</label><br>
+    <label class="label_otst">ffffff</label><br>
+    <label class="label_otst">ffffff</label>
+        <label class="label_12">Аудитория</label>
+    <select class="form-control" id="Viewers" name="Viewers">
+          <option>1 000 - 2 000 чел.</option>
+          <option>5 000 - 10 000 чел.</option>
+          <option>10 000 - 50 000 чел.</option>
+          <option>50 000 - 100 000 чел.</option>
+          <option>100 000 - 200 000 чел.</option>
+        </select>
+    <label class="label_otst">ffffff</label><br>
+    <label class="label_otst">ffffff</label><br>
+    <label class="label_otst">ffffff</label><br>
+    <label class="label_otst">ffffff</label>
+        <label class="label_13">Возростная группа</label>
+    <select class="form-control" id="Viewers_Age" name="Viewers_Age">
+          <option>0 - 10 лет</option>
+          <option>10 - 20 лет</option>
+          <option>20 - 40 лет</option>
+          <option>40 - 60 лет</option>
+          <option>60+ лет</option>
+        </select>
+    <label class="label_otst">ffffff</label><br>
+    <label class="label_otst">ffffff</label><br>
+    <label class="label_otst">ffffff</label><br>
+    <label class="label_otst">ffffff</label>
+    <p>
+        <label class="label_15">О Рекламодателе</label>
+        {{ form.about(class="form-control") }}<br>
+    </p>
+    <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+    {{message}}
+</form>
+{% endblock %}
